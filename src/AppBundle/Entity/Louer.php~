@@ -1,0 +1,40 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Louer
+ *
+ * @ORM\Table(name="louer")
+ * @ORM\Entity
+ */
+class Louer
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_produit", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idProduit;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_debut_loc", type="datetime", nullable=true)
+     */
+    private $dateDebutLoc;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_fin_loc", type="datetime", nullable=true)
+     */
+    private $dateFinLoc;
+
+
+}
+

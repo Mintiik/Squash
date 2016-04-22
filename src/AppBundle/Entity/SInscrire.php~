@@ -1,0 +1,51 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SInscrire
+ *
+ * @ORM\Table(name="s_inscrire")
+ * @ORM\Entity
+ */
+class SInscrire
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_cours", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $idCours;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="planning", type="string", length=25, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $planning;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="max_inscrit", type="integer", nullable=true)
+     */
+    private $maxInscrit;
+
+
+}
+

@@ -1,0 +1,47 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Adherent
+ *
+ * @ORM\Table(name="adherent")
+ * @ORM\Entity
+ */
+class Adherent
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_inscription", type="date", nullable=true)
+     */
+    private $dateInscription;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="nouveau_adherent", type="boolean", nullable=true)
+     */
+    private $nouveauAdherent;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_casier", type="integer", nullable=true)
+     */
+    private $numCasier;
+
+
+}
+

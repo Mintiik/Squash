@@ -1,0 +1,44 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * SEffectuer
+ *
+ * @ORM\Table(name="s_effectuer")
+ * @ORM\Entity
+ */
+class SEffectuer
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="num_salle", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numSalle;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_cours", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $idCours;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="planning", type="string", length=25, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $planning;
+
+
+}
+
